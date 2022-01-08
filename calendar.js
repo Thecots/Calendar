@@ -19,9 +19,9 @@ function calendar(month, year, data) {
   document.querySelector('.secMon').classList.remove('today');
   document.querySelector(`.secMon h4:nth-child(${month})`).classList.add('today')
   document.querySelector('.secYea').innerHTML = `
-  <img src="/arrow.svg" onclick="calendar(${month == 1 ? 12 : month - 1},${month == 1 ? year - 1 : year})">
+  <img src="arrow.svg" onclick="calendar(${month == 1 ? 12 : month - 1},${month == 1 ? year - 1 : year})">
     <h1>${year}</h1>
-  <img src="/arrow.svg" onclick="calendar(${month == 12 ? 1 : month + 1},${month == 12 ? year + 1 : year})">
+  <img src="arrow.svg" onclick="calendar(${month == 12 ? 1 : month + 1},${month == 12 ? year + 1 : year})">
   `;
 };
 calendar(new Date().getMonth() + 1, new Date().getFullYear());
