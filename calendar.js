@@ -17,7 +17,7 @@ function calendar(month, year, data) {
   document.querySelector('.secDayBox').innerHTML = template;
   document.querySelector('.secMon').innerHTML = `<h4 onclick="calendar(1,${year})">Ene</h4><h4 onclick="calendar(2,${year})">Feb</h4><h4 onclick="calendar(3,${year})">Mar</h4><h4 onclick="calendar(4,${year})">Abr</h4><h4 onclick="calendar(5,${year})">May</h4><h4 onclick="calendar(6,${year})">Jun</h4><h4 onclick="calendar(7,${year})">Jul</h4><h4 onclick="calendar(8,${year})">Ago</h4><h4 onclick="calendar(9,${year})">Sep</h4><h4 onclick="calendar(10,${year})">Oct</h4><h4 onclick="calendar(11,${year})">Nov</h4><h4 onclick="calendar(12,${year})">Dic</h4>`;
   document.querySelector('.secMon').classList.remove('today');
-  document.querySelector(`.secMon h4:nth-child(${month})`).classList.add('today')
+  document.querySelector(`.secMon h4:nth-child(${month})`).classList.add('today');
   document.querySelector('.secYea').innerHTML = `
   <img src="arrow.svg" onclick="calendar(${month == 1 ? 12 : month - 1},${month == 1 ? year - 1 : year})">
     <h1>${year}</h1>
@@ -25,5 +25,3 @@ function calendar(month, year, data) {
   `;
 };
 calendar(new Date().getMonth() + 1, new Date().getFullYear());
-
-
